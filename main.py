@@ -4,7 +4,7 @@ import io
 import textwrap
 
 # Load template image (you can replace this with a URL or use a local file)
-TEMPLATE_PATH = "templates/greeting_template.png"  # Use / instead of \ for compatibility
+TEMPLATE_PATH = "greeting_template.png"  # Use / instead of \ for compatibility
 
 # Title
 st.title("🎉 Automatic Card Generator")
