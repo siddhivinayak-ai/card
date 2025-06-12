@@ -7,7 +7,7 @@ import textwrap
 TEMPLATE_PATH = "greeting_template.png"  # Use / instead of \ for compatibility
 
 # Title
-st.title("🎉 Automatic Card Generator")
+st.title("Automatic Card Generator")
 
 # Upload form
 with st.form("greeting_form"):
@@ -15,7 +15,7 @@ with st.form("greeting_form"):
     position = st.text_input("Your Position")
     quote = st.text_input("Enter a Quote")
     uploaded_image = st.file_uploader("Upload Your Face Image", type=["jpg", "jpeg", "png"])
-    submitted = st.form_submit_button("Generate Greeting Card")
+    submitted = st.form_submit_button("Generate  Card")
 
 # When submitted
 if submitted and uploaded_image and name and position and quote:
@@ -56,7 +56,7 @@ if submitted and uploaded_image and name and position and quote:
         draw.text((450, 480), position, fill="black", font=font_italic)
 
         # Display result
-        st.image(template, caption="Your Greeting Card", use_column_width=True)
+        st.image(template, caption="Your  Card", use_column_width=True)
 
         # Save to buffer
         buf = io.BytesIO()
@@ -65,7 +65,7 @@ if submitted and uploaded_image and name and position and quote:
 
         # Download button
         st.download_button(
-            label="📥 Download Greeting Card",
+            label="📥 Download  Card",
             data=byte_im,
             file_name=f"{name}_card.png",
             mime="image/png"
